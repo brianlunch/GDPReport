@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>GDPReport</title>
+  <meta name="A chrome extension that allows users to report ambigious, misleading or illegal consent dialogues." content="GDPReport">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <script src="screenshot.js"></script>
+  <script src="textArea.js"></script>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">GDPReport</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Report<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Learn More</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Project Github</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class=" pageContent row">
+    <div class="col-8">
+      <img id="target" class="webImg" src="white.png">
+    </div>
+      <div class="col-4">
+        <h4>What is wrong with this dialogue?</h4>
+        <form>
+          <div class="checkbox">
+            <input id="misleading" type="checkbox" class="styled" >
+            <label for="misleading">
+                It is misleading/ambigious.
+            </label>
+        </div>
+        <div class="checkbox">
+          <input id="dp" type="checkbox" class="styled" >
+          <label for="dp">
+              It uses dark patterns.
+          </label>
+      </div>
+      <div class="checkbox">
+        <input id="reason1" type="checkbox" class="styled" >
+        <label for="reason1">
+            It is reasonX
+        </label>
+    </div>
+    <div class="checkbox">
+      <input id="reason2" type="checkbox" class="styled" >
+      <label for="reason2">
+          It is reasonY
+      </label>
+  </div>
+  <div class="checkbox">
+    <input type="checkbox" class="styled"  id="link">
+    <label for="link">
+        Other
+    </label>
+</div>
+
+<div id="text" class="form-group" style="display: none;">
+  <label for="other">Please Explain</label>
+  <textarea class="form-control" id="other" rows="3"></textarea>
+</div>
+
+<div id="submit" class="btn btn-outline-primary col-8">Report</div>
+
+        </form>
+        
+      </div>
+  </div>
+  
+    
+ 
+</body>
+
+</html>
